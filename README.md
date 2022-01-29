@@ -18,6 +18,7 @@ Python was chosen to program the model, together with the following libraries: N
 The model was trained through 300 epochs with a batch size of 100. It showed good results on prediction, with an average mean absolute error between 21-22%. The main deviations come from the extremely peak data on isolated days. This may respond to unusual demand or weather conditions on real life, which are extremely hard to predict within the logic of this model, since they don't obey variations on the gas market. 
 The test loss approached the train loss, proving the predictive character of the model. 
 
+![Model_Loss_1](https://user-images.githubusercontent.com/96789733/151657402-87980037-7819-40cc-b7b6-c80f48047069.png)
 
 
 
