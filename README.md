@@ -23,6 +23,7 @@ The test loss approached the train loss, proving the predictive character of the
 
 
 ##Second Neural Network
+A further study on the energy production gives another variable, strictly related with the consumption of gas: the CO2 (Carbon Dioxide) allowance emission cost, that is, the price that has to be paid to produce a ton of CO2. This is regulated by the RDCE UE, the common market to sell and purchase CO2 emission rights. The higher the cost of the allowance, the higher the cost of producing electricity in a combined cycle power plant. If we check the prices in 2021, a upward trend can be observed. 
 
 
 
