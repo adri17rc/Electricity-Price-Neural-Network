@@ -23,7 +23,8 @@ The test loss approached the train loss, proving the predictive character of the
 
 
 ##Second Neural Network
-A further study on the energy production gives another variable, strictly related with the consumption of gas: the CO2 (Carbon Dioxide) allowance emission cost, that is, the price that has to be paid to produce a ton of CO2. This is regulated by the RDCE UE, the common market to sell and purchase CO2 emission rights. The higher the cost of the allowance, the higher the cost of producing electricity in a combined cycle power plant. If we check the prices in 2021, an upward trend can be observed. 
+A further study on the energy production gives another variable, strictly related with the consumption of gas: the CO2 (Carbon Dioxide) allowance emission cost, that is, the price that has to be paid to produce a ton of CO2. This is regulated by the RDCE UE, the common market to sell and purchase CO2 emission rights. The higher the cost of the allowance, the higher the cost of producing electricity in a combined cycle power plant. If we check the prices in 2021, an upward trend can be observed.
 ![EUA_2021](https://user-images.githubusercontent.com/96789733/151659565-8084721a-4a21-4371-b767-fc3a15d40540.png)
 
-
+In this neural network, two independent variables were used. The structure of the neural network was kept, as a further complexity showed no improvent and increased significantly the running time. The val_loss function approaches the loss function closer in this case, showing a better fitting of the data. Prediction was also more accurate, as the mean relative error got reduced to 18%-19%. Yet, the biggest challenge to overcome, is the prediction of highly peaked values, where the model performs poorly. As it was explained before, this may obey tendencies not hconsidered in this model.
+![Model_Loss_2](https://user-images.githubusercontent.com/96789733/151778884-a5249018-b598-4585-baf2-0dd9da6692e7.png)![Prediction2](https://user-images.githubusercontent.com/96789733/151778820-d732d8ab-12ec-49bd-be3f-6b7a4ceecd58.png)
