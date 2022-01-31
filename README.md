@@ -27,4 +27,5 @@ A further study on the energy production gives another variable, strictly relate
 ![EUA_2021](https://user-images.githubusercontent.com/96789733/151659565-8084721a-4a21-4371-b767-fc3a15d40540.png)
 
 In this neural network, two independent variables were used. The structure of the neural network was kept, as a further complexity showed no improvent and increased significantly the running time. The val_loss function approaches the loss function closer in this case, showing a better fitting of the data. Prediction was also more accurate, as the mean relative error got reduced to 18%-19%. Yet, the biggest challenge to overcome, is the prediction of highly peaked values, where the model performs poorly. As it was explained before, this may obey tendencies not hconsidered in this model.
+
 ![Model_Loss_2](https://user-images.githubusercontent.com/96789733/151778884-a5249018-b598-4585-baf2-0dd9da6692e7.png)![Prediction2](https://user-images.githubusercontent.com/96789733/151778820-d732d8ab-12ec-49bd-be3f-6b7a4ceecd58.png)
