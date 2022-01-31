@@ -10,6 +10,7 @@ The motivation behind the developed neural network is to predict the fluctuation
 Graphs confirm the rise in prices, mostly in the second half of the year. Correlation between gas and electricity prices can be confirmed by a more detailed study of the electricity pricing system. Basically, the most expensive source of energy is the one that sets the final price. In 2020, combined cycles set the price on 20.7% of the hours, whereas hidroelectic did it on 45.8% of the hours and renewable source on the 29.8% (Source:https://www.omie.es/sites/default/files/2021-01/informe_anual_2020_es.pdf). It may look hidroelectic production is responsible of the increase, but a closer look tell us hidroelectric prices are set taking gas-produced energy as a reference (source:https://www.businessinsider.es/como-fija-precio-luz-espana-790815).
 
 -FIRST NEURAL NETWORK
+(See ElecPriceNN.py)
 
 The previous information justifies the development of a neural network able to find the relation between both variables and predict the future behaviour of the market. 
 Python was chosen to program the model, together with the following libraries: Numpy, Tensorflow, Keras and Matplotlib. The neural network consists in 3 sequential fully connected hidden layers model, with 12, 8 and 4 nodes repectively, yielding 181 trainable parameters. More complex structures were trained, showing no noticeable improvement in results. An EarlyStopping calback was added, to prevent overfitting of data (a common on problem on small datasets as the one used). To compile the model, the loss chosen was 'mean square error' and the optimizer 'rmsprop'; model yields no accuracy, since it is a regression problem, not a classification. Our 'x', or independet variable, were the gas prices from the 1/4/2021 to the 12/7/2021, whereas the 'y' or dependent variable were the electricity prices from the 1/11/2021 until 12/14/2021; that means a week shift between both variables, so that the model may have a predicitive usefulness. Once the model was trained, a prediction for the last 200 days of the train dataset was made (see plot below). To get an idea of how well the model may predict the future behaviour, the mean relative error was computed. 
@@ -23,8 +24,10 @@ The test loss approached the train loss, proving the predictive character of the
 
 
 -SECOND NEURAL NETWORK
+(See ElecPriceNN_2.py)
 
 A further study on the energy production gives another variable, strictly related with the consumption of gas: the CO2 (Carbon Dioxide) allowance emission cost, that is, the price that must be paid to produce a ton of CO2. This is regulated by the RDCE UE, the common market to sell and purchase CO2 emission rights. The higher the cost of the allowance, the higher the cost of producing electricity in a combined cycle power plant. If we check the prices in 2021, an upward trend can be observed.
+
 ![EUA_2021](https://user-images.githubusercontent.com/96789733/151659565-8084721a-4a21-4371-b767-fc3a15d40540.png)
 
 In this neural network, two independent variables were used. The structure of the neural network was kept, as a further complexity showed no improvent and significantly increased the running time. The epochs were increased to 600. The val_loss function approaches the loss function closer in this case, showing a better fitting of the data. Prediction was also more accurate, as the mean relative error got reduced to 18%-19%. Yet, the biggest challenge to overcome, is the prediction of highly peaked values, where the model performs poorly. As it was explained before, this may obey tendencies not considered in this simple model. Predictions tend to overstimate the price when the don't fluctuate much, and underestimate it when it peaks (mainly in October,November and December).
